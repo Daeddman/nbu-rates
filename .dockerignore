@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/*.db
+**/appsettings.Local.json
+.git/
+.github/
+.vs/
+.idea/
+docs/
+tests/
