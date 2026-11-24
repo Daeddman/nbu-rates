@@ -1,5 +1,7 @@
 # Курси валют НБУ → SQLite (C#)
 
+[![CI](https://github.com/Daeddman/nbu-rates/actions/workflows/ci.yml/badge.svg)](https://github.com/Daeddman/nbu-rates/actions/workflows/ci.yml)
+
 Консольний застосунок на C#/.NET 10: надсилає HTTP-запит до відкритого API Національного банку України,
 показує отримані курси на екрані, зберігає їх у SQLite (2 таблиці, пов'язані зовнішнім ключем)
 і виводить збережені дані з бази.
@@ -76,7 +78,7 @@ CREATE TABLE rates (
 Пакети NuGet (`Microsoft.Data.Sqlite`, `Microsoft.Extensions.Configuration.*`) завантажаться автоматично.
 
 ```bash
-git clone <посилання на цей репозиторій>
+git clone https://github.com/Daeddman/nbu-rates.git
 cd nbu-rates
 dotnet run --project src/NbuRates
 ```
