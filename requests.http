@@ -1,0 +1,26 @@
+# Запити до API НБУ для VS Code (REST Client) / Visual Studio / Rider.
+# Ті самі запити можна відкрити в браузері (DevTools → Network) або в Postman.
+@base = https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew
+
+### 1. Курс долара на дату
+GET {{base}}?json&valcode=USD&date=20261120
+Accept: application/json
+
+### 2. Інший параметр valcode — інша відповідь
+GET {{base}}?json&valcode=EUR&date=20261120
+Accept: application/json
+
+### 3. Інший параметр date — інша відповідь
+GET {{base}}?json&valcode=USD&date=20260102
+Accept: application/json
+
+### 4. Без valcode — усі валюти на дату
+GET {{base}}?json&date=20261120
+Accept: application/json
+
+### 5. Неіснуючий код валюти — подивіться, що відповість API
+GET {{base}}?json&valcode=XYZ&date=20261120
+Accept: application/json
+
+### 6. Без параметра json — відповідь у XML
+GET {{base}}?valcode=USD&date=20261120
