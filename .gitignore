@@ -1,0 +1,27 @@
+# Збірка
+bin/
+obj/
+publish/
+TestResults/
+
+# База даних (створюється під час запуску)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Локальні налаштування й секрети — не комітимо
+appsettings.Local.json
+.env
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+.vscode/*
+!.vscode/extensions.json
+
+# ОС
+.DS_Store
+Thumbs.db
